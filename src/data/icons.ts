@@ -1,5 +1,5 @@
 // Auto-generated - do not edit manually
-// Generated from storage/datasets/default on 2026-06-29T06:55:18.075Z
+// Generated from storage/datasets/default on 2026-07-02T06:05:12.849Z
 
 export interface IconMetadata {
   name: string;
@@ -2411,6 +2411,7 @@ export const iconMetadata: IconMetadata[] = [
   { name: "MilkOff", categories: ["Food & beverage"] },
   { name: "Nut", categories: ["Food & beverage"] },
   { name: "NutOff", categories: ["Food & beverage"] },
+  { name: "PaperBag", categories: ["Food & beverage", "Shopping"] },
   { name: "Pizza", categories: ["Food & beverage"] },
   { name: "Popcorn", categories: ["Food & beverage", "Multimedia"] },
   { name: "Popsicle", categories: ["Food & beverage"] },
@@ -3087,7 +3088,7 @@ export const categories: CategoryMetadata[] = [
   { name: "Emoji", iconCount: 45 },
   { name: "File icons", iconCount: 166 },
   { name: "Finance", iconCount: 57 },
-  { name: "Food & beverage", iconCount: 73 },
+  { name: "Food & beverage", iconCount: 74 },
   { name: "Gaming", iconCount: 154 },
   { name: "Home", iconCount: 62 },
   { name: "Layout", iconCount: 144 },
@@ -3104,7 +3105,7 @@ export const categories: CategoryMetadata[] = [
   { name: "Seasons", iconCount: 5 },
   { name: "Security", iconCount: 59 },
   { name: "Shapes", iconCount: 61 },
-  { name: "Shopping", iconCount: 27 },
+  { name: "Shopping", iconCount: 28 },
   { name: "Social", iconCount: 138 },
   { name: "Sports", iconCount: 16 },
   { name: "Sustainability", iconCount: 25 },
@@ -3116,7 +3117,7 @@ export const categories: CategoryMetadata[] = [
   { name: "Weather", iconCount: 51 }
 ];
 
-export const iconCount = 1744;
+export const iconCount = 1745;
 export const categoryCount = 42;
 
 // Helper functions
