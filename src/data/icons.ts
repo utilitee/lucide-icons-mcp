@@ -1,5 +1,5 @@
 // Auto-generated - do not edit manually
-// Generated from storage/datasets/default on 2026-07-02T06:05:12.849Z
+// Generated from storage/datasets/default on 2026-07-10T06:10:10.566Z
 
 export interface IconMetadata {
   name: string;
@@ -1957,6 +1957,7 @@ export const iconMetadata: IconMetadata[] = [
   { name: "ServerCog", categories: ["Coding & development", "Devices"] },
   { name: "ServerCrash", categories: ["Coding & development", "Devices"] },
   { name: "ServerOff", categories: ["Coding & development", "Devices"] },
+  { name: "ServerPlus", categories: ["Coding & development", "Devices"] },
   { name: "Slash", categories: ["Coding & development", "Mathematics"] },
   {
     name: "SpellCheck",
@@ -2326,6 +2327,7 @@ export const iconMetadata: IconMetadata[] = [
   { name: "BanknoteCheck", categories: ["Finance"] },
   { name: "BanknoteX", categories: ["Finance"] },
   { name: "CircleDollarSign", categories: ["Finance"] },
+  { name: "CircleEuroSign", categories: ["Finance", "Shopping"] },
   {
     name: "CirclePercent",
     categories: ["Finance", "Mathematics", "Shopping", "Social"]
@@ -3083,11 +3085,11 @@ export const categories: CategoryMetadata[] = [
   { name: "Connectivity", iconCount: 94 },
   { name: "Cursors", iconCount: 34 },
   { name: "Design", iconCount: 147 },
-  { name: "Coding & development", iconCount: 250 },
-  { name: "Devices", iconCount: 178 },
+  { name: "Coding & development", iconCount: 251 },
+  { name: "Devices", iconCount: 179 },
   { name: "Emoji", iconCount: 45 },
   { name: "File icons", iconCount: 166 },
-  { name: "Finance", iconCount: 57 },
+  { name: "Finance", iconCount: 58 },
   { name: "Food & beverage", iconCount: 74 },
   { name: "Gaming", iconCount: 154 },
   { name: "Home", iconCount: 62 },
@@ -3105,7 +3107,7 @@ export const categories: CategoryMetadata[] = [
   { name: "Seasons", iconCount: 5 },
   { name: "Security", iconCount: 59 },
   { name: "Shapes", iconCount: 61 },
-  { name: "Shopping", iconCount: 28 },
+  { name: "Shopping", iconCount: 29 },
   { name: "Social", iconCount: 138 },
   { name: "Sports", iconCount: 16 },
   { name: "Sustainability", iconCount: 25 },
@@ -3117,7 +3119,7 @@ export const categories: CategoryMetadata[] = [
   { name: "Weather", iconCount: 51 }
 ];
 
-export const iconCount = 1745;
+export const iconCount = 1747;
 export const categoryCount = 42;
 
 // Helper functions

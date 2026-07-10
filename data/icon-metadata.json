@@ -6208,6 +6208,13 @@
     ]
   },
   {
+    "name": "ServerPlus",
+    "categories": [
+      "Coding & development",
+      "Devices"
+    ]
+  },
+  {
     "name": "Slash",
     "categories": [
       "Coding & development",
@@ -7840,6 +7847,13 @@
     "name": "CircleDollarSign",
     "categories": [
       "Finance"
+    ]
+  },
+  {
+    "name": "CircleEuroSign",
+    "categories": [
+      "Finance",
+      "Shopping"
     ]
   },
   {
