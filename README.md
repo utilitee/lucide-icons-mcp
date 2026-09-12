@@ -125,7 +125,7 @@ bun run src/entry.ts --stdio
 
 ## Docker
 
-Run the server in HTTP mode with Docker. On **every container start**, the entrypoint runs the [Development Scripts](#development-scripts) first (`lint`, `pre-build` — which includes `crawl` — and `build`) and then starts the HTTP server (`bun run dev`) on port `3000`. `dev:stdio` is skipped because the container runs in HTTP mode.
+Run the server in HTTP mode with Docker. On **every container start**, the entrypoint runs the [Development Scripts](#development-scripts) first (`lint`, `pre-build` — which includes `crawl`, skipped when no new icons exist — and `build`) and then starts the HTTP server (`bun run dev`) on port `3000`. `dev:stdio` is skipped because the container runs in HTTP mode.
 
 ```bash
 docker compose up --build -d
@@ -141,7 +141,7 @@ docker compose logs -f
 
 Notes:
 
-- Startup takes a few minutes because `pre-build` crawls the Lucide website and rebuilds the icon data on every start.
+- The first start takes a few minutes because `pre-build` crawls the Lucide website. After that, the crawl only runs when a new Lucide release is detected — the dataset is persisted in the `lucide-icons-data` volume, so restarts and `docker compose up --build` reuse it.
 - Change the host port with `PORT` (in `docker-compose.yml`) if `3000` is taken.
 
 ## Configuration with AI Tools
@@ -381,8 +381,9 @@ This opens the Inspector interface for interactive testing of your MCP server.
 - **`bun run build`**: Compiles TypeScript to JavaScript (output in `build/`)
 - **`bun run lint`**: Lints the codebase using ESLint
 - **`bun run lint:fix`**: Automatically fixes linting issues
-- **`bun run crawl`**: Crawls Lucide website to update icon data
-- **`bun run pre-build`**: Crawls data, builds icon metadata, and fixes linting
+- **`bun run crawl`**: Crawls the Lucide website to update icon data (full crawl)
+- **`bun run crawl:incremental`**: Crawls only when the cached dataset is older than the latest Lucide release; skips otherwise
+- **`bun run pre-build`**: Updates the Lucide version, crawls (only if new icons exist), builds icon metadata, and fixes linting
 
 ## Data Sources
 

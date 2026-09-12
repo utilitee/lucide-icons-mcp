@@ -47,7 +47,7 @@ export async function startHttpServer() {
 
       await server.connect(transport);
       await transport.handleRequest(req, res, req.body);
-    } catch (error) {
+    } catch {
       if (!res.headersSent) {
         res.status(500).json({
           jsonrpc: "2.0",

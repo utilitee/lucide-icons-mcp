@@ -24,7 +24,8 @@
     "lint:fix": "eslint . --fix",
     "prepare": "husky",
     "crawl": "tsx src/scripts/main.ts",
-    "pre-build": "bun run crawl && bun run update-version && bun src/scripts/build-data.ts && bun run lint:fix",
+    "crawl:incremental": "tsx src/scripts/crawl-incremental.ts",
+    "pre-build": "bun run update-version && bun run crawl:incremental && bun src/scripts/build-data.ts && bun run lint:fix",
     "update-version": "bun run src/scripts/version.ts"
   },
   "dependencies": {

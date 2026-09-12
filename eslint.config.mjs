@@ -55,5 +55,12 @@ export default tseslint.config(
       ],
       "simple-import-sort/exports": "error"
     }
+  },
+  {
+    // CLI scripts print progress via console; that is their output channel.
+    files: ["src/scripts/**"],
+    rules: {
+      "no-console": "off"
+    }
   }
 );

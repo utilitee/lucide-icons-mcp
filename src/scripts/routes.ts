@@ -327,7 +327,7 @@ router.addDefaultHandler(async ({ log, pushData, request, page }) => {
             setTimeout(() => resolve(true), 50);
           });
         });
-      } catch (e) {
+      } catch {
         // Ignore timeout, continue with extraction
       }
 
