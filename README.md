@@ -123,6 +123,27 @@ Often used for direct integration with tools like Claude Desktop or the MCP Insp
 bun run src/entry.ts --stdio
 ```
 
+## Docker
+
+Run the server in HTTP mode with Docker. On **every container start**, the entrypoint runs the [Development Scripts](#development-scripts) first (`lint`, `pre-build` — which includes `crawl` — and `build`) and then starts the HTTP server (`bun run dev`) on port `3000`. `dev:stdio` is skipped because the container runs in HTTP mode.
+
+```bash
+docker compose up --build -d
+```
+
+The MCP endpoint is available at `http://localhost:3000/mcp` (POST). To connect a client to it, use a URL like `http://localhost:3000/mcp` with the streamable HTTP transport.
+
+To follow the startup scripts:
+
+```bash
+docker compose logs -f
+```
+
+Notes:
+
+- Startup takes a few minutes because `pre-build` crawls the Lucide website and rebuilds the icon data on every start.
+- Change the host port with `PORT` (in `docker-compose.yml`) if `3000` is taken.
+
 ## Configuration with AI Tools
 
 ### Example: Claude Desktop

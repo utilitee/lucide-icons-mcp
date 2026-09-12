@@ -1,0 +1,16 @@
+services:
+  lucide-icons-mcp:
+    build: .
+    ports:
+      - "2100:3000"
+    environment:
+      PORT: "3000"
+    restart: unless-stopped
+    # The startup runs the Development Scripts (including a Lucide website
+    # crawl), so allow several minutes before the healthcheck starts failing.
+    healthcheck:
+      test: ["CMD", "bun", "-e", "(async () => { const r = await fetch('http://127.0.0.1:3000/mcp', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'tools/list' }) }); if (r.status !== 200) process.exit(1); })()"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 600s
